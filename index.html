@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/script.js"></script>
 </head>
@@ -53,8 +54,8 @@
                 </div>
                 <div class="title-item right">
                     <form action="/">
-                        <input type="text" id="input-search" name="serach" >
                         <fieldset>
+                            <input type="text" id="input-search" name="serach" placeholder="도시락 검색">
                             <label for="search"></label>
                             <img src="img/icon_search.png" alt="검색 아이콘" />
                         </fieldset>
@@ -87,6 +88,53 @@
         </div>
     </header>
 
-    <!-- 섹션 시작 -->
+    <!-- 섹션 visual - 이미지 슬라이드 -->
+    <section class="visual">
+        <div class="slide-container">
+            <div class="slide"><img src="img/rolling1920x550_5.jpg" alt=""></div>
+            <div class="slide"><img src="img/rolling_life_1920x550.jpg" alt=""></div>
+            <div class="slide"><img src="img/rolling_sinae_1920x550.jpg" alt=""></div>
+            <div class="slide"><img src="img/rolling_mdpick_1920x550.jpg" alt=""></div>
+            <div class="slide"><img src="img/rolling_banchik_1920x550.jpg" alt=""></div>
+        </div>
+    </section>
+
+    <!-- 섹션 best - 인기상품 -->
+    <section class="best wrap">
+        <div class="title">
+            <h2>BSET PRODUCT</h2>
+            <p>
+                <b>한 주간 가장 많이 팔린</b>
+                인기상품
+            </p>
+            <hr>
+        </div>
+        <div class="slide">
+            <div class="product-slide">
+                <!-- 아이템 -->
+                <div class="card">
+                    <!-- 이미지 영역 -->
+                    <div class="img-box">
+                        <img src="img/2728de26be97444969e07c6583208f04.jpg" alt="상품 이미지">
+                    </div>
+                    <!-- 내용 영역 -->
+                    <div class="info-box">
+                        <div class="proudct-title">
+                            <h2>상품이름</h2>
+                            <p>#일주일 #다이어트</p>
+                        </div>
+                        <div class="product-info">
+                            <span class="sale">50% SALE</span>
+                            <div class="price-box">
+                                <span class="price">50,000원</span>
+                                <span class="discount">25,000원</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>
