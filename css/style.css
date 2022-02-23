@@ -12,6 +12,9 @@
     --gray-color : #9b9992;
 }
 
+/* 스크롤 부드럽게 움직이기 */
+html { scroll-behavior: smooth;}
+
 body { font-family: 'Noto Sans KR', sans-serif; }
 
 /* 전체영역 */
@@ -152,7 +155,8 @@ header #gnb_wrap #gnb .gnb_right li { float: left; height: 100%; }
   
 /* 섹션 visual (이미지 슬라이드) */
 section.visual {
-    width: 1920px;
+    /* width: 1920px; */   
+    width: auto;
     margin: 0 auto;
 }
 
@@ -317,7 +321,7 @@ section.intro .multi-slide {
     overflow: hidden;
     background-color: var(--white-color);
     box-sizing: 0 0 20px var(--gray-color);
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 /* 멀티 슬라이드 - 왼쪽영역 */
 section.intro .multi-slide .left-box {
@@ -640,19 +644,21 @@ section.intro > .info {
 
 section.intro > .info ul {}
 section.intro > .info ul li {
-    width: calc(100%/3);
+    width: calc(100% / 3);
     float: left;
 }
-section.intro > .info ul li .img-box { overflow: hidden; }
+section.intro > .info ul li .img-box { overflow: hidden;}
 section.intro > .info ul li .img-box img {
     display: block;
     width: 100%;
-    transition: all 0.5s ease;
+    transition: all 0.5s ease-out;
 }
 
+/* 사진 마우스 호버 : 확대 */
 section.intro > .info ul li .img-box img:hover {
-    transform: scale(1.15);
+    transform: scale(1.1);
 }
+
 section.intro > .info ul li .info-box {
     padding: 50px;
     height: 246px;
@@ -661,26 +667,29 @@ section.intro > .info ul li .info-box {
 }
 section.intro > .info ul li .info-box .title {
     font-size: 28px;
-    margin-bottom: 25px;
     font-weight: 700;
+    margin-bottom: 25px;
 }
 section.intro > .info ul li .info-box .desc {
     font-size: 18px;
     line-height: 30px;
-    letter-spacing: 0;
+    letter-spacing: 0px;
     color: var(--gray-color);
     word-break: keep-all;
 }
+
 
 /* 섹션 notice */
 section.notice {
     margin-top: 90px;
 }
+
 section.notice .area { 
-    padding-top: 50px 0;
+    padding: 50px 0;
     margin-bottom: 100px;
 }
-section.notice .area .box {
+
+section.notice .area .box  {
     float: left;
     background-color: var(--white-color);
     position: relative;
@@ -691,10 +700,10 @@ section.notice .area .box {
     box-sizing: border-box;
 }
 
-section.notice .area .box>h2 {
+section.notice .area .box div > h2 {
     display: inline-block;
     color: var(--black-color);
-    border-bottom: 1px  solid var(--black-color);
+    border-bottom: 1px solid var(--black-color);
     margin-bottom: 20px;
     font-size: 0.9rem;
 }
@@ -708,10 +717,16 @@ section.notice .area .box div > em {
     color: var(--second-color);
 }
 
-section.notice .area .box div p strong { width: 2.1em; color: var(--black-color); } 
-section.notice .area .box div p { font-size: 0.9rem; color: var(--gray-color); }
+section.notice .area .box div p strong { 
+    width: 2.1em; 
+    color: var(--black-color);
+}
+section.notice .area .box div p { 
+    font-size: 0.9rem; 
+    color: var(--gray-color); 
+}
 
-section.notice .area .box .sub-title { width: 3.5em; }
+section.notice .area .box .sub-title { width: 3.5em;}
 section.notice .area .box .value { 
     font-size: 1.2em;
     color: var(--second-color);
@@ -722,10 +737,12 @@ section.notice .area .box .go {
     padding: 0.5em 4em 0.5em 1em;
     border: 1px solid var(--black-color);
     font-size: 0.75em;
+    margin-top: 1em;
     position: relative;
     background: url(../img/footer_bank_go.gif) top 55% right 1em no-repeat;
     box-sizing: border-box;
 }
+
 section.notice .area .box .go .items {
     position: absolute;
     width: 175px;
@@ -734,24 +751,22 @@ section.notice .area .box .go .items {
     border: 1px solid var(--black-color);
     top: 100%;
     padding: 0.5em 1em;
-    display: none;
     box-sizing: border-box;
+    display: none;
 }
-
-section.notice .area .box .go:hover .items {
+/* 인터넷 뱅킹 바로가기 - 마우스 올렸을 때 */
+section.notice .area .box .go:hover .items  {
     display: block;
 }
-
 
 section.notice .area .box .go .items a {
     display: block;
 }
 
 
-
-section.notice .area .small-box {
-    float: left;
+section.notice .area .small-box  {
     margin-left: 20px;
+    float: left;
     background-color: var(--white-color);
     position: relative;
     width: 285px;
@@ -759,7 +774,6 @@ section.notice .area .small-box {
     padding: 20px 30px;
     border: 1px solid var(--gray-color);
     box-sizing: border-box;
-
 }
 section.notice .area .small-box h2 {
     margin-bottom: 40px;
@@ -770,10 +784,10 @@ section.notice .area .small-box > a {
     position: absolute;
     right: 30px;
     top: 20px;
-    color: var(--gray-color)
+    color: var(--gray-color);
 }
-section.notice .area .small-box ul {}
-section.notice .area .small-box ul li{
+section.notice .area .small-box ul  {}
+section.notice .area .small-box ul li {
     color: var(--gray-color);
     font-size: 0.9rem;
     line-height: 1.4rem;
@@ -789,25 +803,29 @@ section.notice .area .small-box::after {
     top: 70px;
 }
 
+
 section.notice .area .left {
     width: 70%;
     float: left;
     letter-spacing: -1px;
 }
+
 section.notice .area .left ul {}
 section.notice .area .left ul li {
     display: inline-block;
     margin-right: 1em;
-    color: var(--gray-color);  
-    font-size: 0.9rem;  
+    color: var(--gray-color);
+    font-size: 0.9rem;
 }
 
 section.notice .area .left ul li strong {
     font-weight: 400;
 }
-section.notice .area .right {
+
+section.notice .area .right {    
     float: right;
 }
+
 section.notice .area .right a {
     font-size: 16px;
     padding: 7px 15px;
@@ -820,9 +838,63 @@ section.notice .area .right a {
 }
 
 section.notice .area .right a:hover {
-    color: var(--primary-color);
+    color:var(--primary-color)
 }
 
 section.notice .area .right a span {
     font-size: 11px;
 }
+
+/* footer */
+footer { font-size: 0.85em; text-align: center; line-height: 130px; }
+footer ul { display: inline;}
+footer ul li { display: inline-block; }
+footer ul li em {}
+footer ul li a { color: var(--gray-color); }
+
+/* footer 구분선 */
+footer ul li a:after {
+    content: '';
+    display: inline-block;
+    height: 0.8em;
+    width: 1px;
+    border-right: 1px solid var(--gray-color) ;
+    margin: 0 1em;
+}
+
+footer ul li a.last::after {
+    display: none;
+}
+
+
+/* 플로팅 버튼 - 마스코트 */
+.float-banner {
+    position: fixed;  /* 브라우저 기준으로 위치 */
+    left: 2rem;
+    bottom: 2rem;
+    z-index: 900;
+    cursor: pointer;
+}
+.float-banner img {
+    width: 100%;
+}
+
+
+/* 플로팅 버튼 - 퀵메뉴 */
+.quick-menu {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid var(--gray-color);
+    background-color: var(--white-color);
+    z-index: 1000;
+}
+.quick-menu a { 
+    display: block; 
+    border-bottom: 1px solid var(--gray-color);
+}
+.quick-menu a img {
+    width: 100%;
+}
+

@@ -8,7 +8,7 @@ a img {border: none;}
 li {list-style: none;}
 address, em, i {font-style: normal;}
 
-.clear { 
+.clear {
     content: '';
     display: block;
     clear: both;
