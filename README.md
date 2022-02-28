@@ -11,7 +11,7 @@
 
 
 <!-- About The Project -->
-## About The Project
+## About The Project ⭐️
 
 This is the very first project that I've clone copied the existing website called "For ME" with assistance. 
 I have always wanted to create a shopping website that's simple and has commonly used animations like slides. 
@@ -35,7 +35,7 @@ with never-ending adjustments and thinking. Special thanks to my mentor and the 
 * <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white"/></a>
 
 
-## Things To Improve
+## Things To Improve 🍪
 
 Since it was clone coding, I had time to deeply reflect on the fact of myself blindly commencing with coding without any plans or design adjustments beforehand. Although this was a clone project, I've realized that starting without planning takes more time and that it has higher possibility of getting lost in the middle. Therefore, I would like to try planning parts aforetime and if possible, I wish to try combining similar or repeated styles with same classes or ids, which will increase reusability of codes.  
 
@@ -44,7 +44,7 @@ Since it was clone coding, I had time to deeply reflect on the fact of myself bl
 
 
 <!-- CONTACT -->
-## Contact
+## Contact 🌈
 
 <strong>Jieon Jaylene Kim</strong> : [@JieonKim](https://www.linkedin.com/in/jieon-kim-933a43a8/) - jieonjaylenekim@gmail.com
 <br>
